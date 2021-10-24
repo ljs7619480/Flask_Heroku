@@ -31,10 +31,18 @@ with open('104/category/district.csv', 'r') as csv_file:
         dist_map[int(row[0])] = row[1]
 
 
+
 @app.route("/")
+def hello():
+    return render_template('job.html')
+
+@app.route("/mont")
 def hello():
     return render_template('mont.html')
 
+@app.route("/tgetet")
+def hello():
+    return render_template('tgetet.html')
 
 #https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find
 @app.route("/job/<custno>/<jobno>")
@@ -48,6 +56,14 @@ def home_page(custno, jobno):
                            next_job=data[0]['next_job'],
                            district=dist_map[data[0]['addr_no']])
 
+
+@app.route("/store")
+def hello():
+    return render_template('store.html')
+
+@app.route("/movie")
+def hello():
+    return render_template('movies.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
