@@ -37,11 +37,11 @@ def hello():
     return render_template('job.html')
 
 @app.route("/mont")
-def hello():
+def mont():
     return render_template('mont.html')
 
 @app.route("/tgetet")
-def hello():
+def tgetet():
     return render_template('tgetet.html')
 
 #https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find
@@ -58,11 +58,11 @@ def home_page(custno, jobno):
 
 
 @app.route("/store")
-def hello():
+def store():
     return render_template('store.html')
 
 @app.route("/movie")
-def hello():
+def movie():
     return render_template('movies.html')
 
 if __name__ == '__main__':
