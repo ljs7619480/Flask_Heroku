@@ -1,7 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+<title>TEST</title>
+	<style>
+  .spinner {
+    width: 70px;
+    height: 70px;
+    background-color: #5b99de;
+    margin: 50px auto 50px auto;
+    animation: RotatePlane 1.5s infinite ease-in-out;
+  }
+  .text {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #5b99de;
+  }
+  @keyframes RotatePlane {
+    0%   { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50%  { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+    100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); }
+  }
+</style>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Material Design for Bootstrap</title>
@@ -15,21 +35,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
     <!-- MDB -->
-    <link rel="stylesheet" href="/css/mdb.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <style>
       .bg-104 {
           background-color: #ff7800!important;
       }
     </style>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
-      <script src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.js"></script>
-      <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.css"/>
-  </head>
-
-  <body>
-    
+</head>
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-104">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">面通治痛單</a>
@@ -56,29 +70,26 @@
             </div>
           </div>
         </nav>
-
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-4 mb-5">
-          <div class="card">
-            <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="semibold mb-3">Card title</h4>
-              <p class="mb-4">
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
-              <a href="#!" class="btn btn-primary">Button</a>
-            </div>
-          </div>
+        <div class="col-12">
+<div class="text">
+  <span></span>
+  <br>
+  <span>距離面試結束還有… <span id="uCounter">00</span>s</span>
+</div>
+<!-- <div class="text-center" style="margin:4rem 0">
+  <button id="uStart" type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-time"></span> 開始倒數計時</button>
+</div -->
+			</div>
         </div>
-
       </div>
-    </div>
-  </body>
-
-  <!-- MDB -->
-  <script type="text/javascript" src="/js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
+<script>
+  (function countdown(iCount, cUrl) {
+    if (iCount === 0) { window.location.assign(cUrl); }
+    document.getElementById('uCounter').innerHTML = iCount;
+    setTimeout(function () { countdown(iCount - 1); }, 1000);
+  })(3, "/mont");
+</script>
+</body>
 </html>
