@@ -88,8 +88,8 @@
   (function countdown(iCount, cUrl) {
     if (iCount === 0) { window.location.assign(cUrl); }
     document.getElementById('uCounter').innerHTML = iCount;
-    setTimeout(function () { countdown(iCount - 1); }, 1000);
-  })(3, "/mont");
+    setTimeout(function () { countdown(iCount - 1,cUrl); }, 1000);
+  })(3, '/mont');
 </script>
 </body>
 </html>
