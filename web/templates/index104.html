@@ -14,15 +14,18 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/micon@3.0.168/micon.min.css" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="/css/mdb.min.css" />
     <!-- Custom styles -->
     <style>
       .bg-104 {
           background-color: #ff7800!important;
       }
     </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
+      <script src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.js"></script>
+      <link rel="stylesheet" href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.css"/>
   </head>
 
   <body>
@@ -56,67 +59,25 @@
 
     <div class="container my-5">
       <div class="row">
-        <div class="text-center">
-          <h1 class='semibold'>壓力指數</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-2 col-4">
+        <div class="col-md-4 mb-5">
           <div class="card">
+            <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <i class="far fa-smile-wink fa-5x"></i><br><br>
-              <a href="job/6976d5c5-26a5-467d-8c00-eec6cc569c56/4736769"><button type="button" class="btn btn-primary">1</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2  col-4">
-          <div class="card">
-            <div class="card-body">
-              <i class="far fa-grin fa-5x"></i><br><br>
-              
-              <a href="job/2d274098-9175-4b70-b1f8-5d00ccb79543/9215561"><button type="button" class="btn btn-primary">2</button></a><!--java 工程師 -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2  col-4">
-          <div class="card">
-            <div class="card-body">
-              <i class="far fa-meh fa-5x"></i><br><br>
-              <a href="job/6976d5c5-26a5-467d-8c00-eec6cc569c56/4736769"><button type="button" class="btn btn-primary">3</button></a>
+              <h4 class="semibold mb-3">{{ next_job }}</h4>
+              <p class="mb-4">
+                {{ district }}梅竹大道104號之2
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="row">
-<!--         <div class="col-md-2 mb-2 col-2">
-        </div> -->
-        <div class="col-md-4 mb-2 col-4">
-          <div class="card">
-            <div class="card-body">
-              <i class="far fa-sad-tear fa-5x"></i></i><br><br>
-              <a href="job/6976d5c5-26a5-467d-8c00-eec6cc569c56/4736769"><button type="button" class="btn btn-primary">4</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2 col-4">
-          <div class="card">
-            <div class="card-body">
-              <i class="far fa-sad-cry fa-5x"></i><br><br>
-              <a href="job/6976d5c5-26a5-467d-8c00-eec6cc569c56/4736769"><button type="button" class="btn btn-primary">5</button></a>
-            </div>
-          </div>
-        </div>
-<!--         <div class="col-md-2 mb-2 col-2">
-        </div> -->
-      </div>
-
     </div>
   </body>
 
   <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript"></script>
 </html>

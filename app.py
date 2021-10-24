@@ -7,7 +7,7 @@ Created on Sat Aug 18 01:00:17 2018
 
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
-import json, csv
+import csv
 
 # class EntryEncoder(json.JSONEncoder):
 #     def default(self, obj):
@@ -16,7 +16,10 @@ import json, csv
 #         # Let the base class default method raise the TypeError
 #         return json.JSONEncoder.default(self, obj)
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='/', 
+            static_folder='web/static',
+            template_folder='web/templates')
 app.config["MONGO_URI"] = "mongodb+srv://104-2:nycuisgood@hackathon.ugeyw.mongodb.net/job"
 mongo = PyMongo(app)
 
