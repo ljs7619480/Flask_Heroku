@@ -69,7 +69,7 @@ def store():
 
 @app.route("/movie")
 def movie():
-    return render_template('movies.html')
+    return render_template('movie.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
