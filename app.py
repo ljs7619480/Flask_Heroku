@@ -53,12 +53,14 @@ def tgetet():
 #https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find
 @app.route("/job/<custno>/<jobno>")
 def home_page(custno, jobno):
-    data_cursor = mongo.db.processed_v5.find({"custno":custno, "jobno": jobno})
+    data_cursor = mongo.db.processed_v5.find({"custno": custno, "jobno": jobno})
     data = list(data_cursor[:3])
     for d in data:
         d.pop("_id")
 
-    return render_template('index104.html', 
+    template_name = 'index104_movie.html' if data[0]['suject'] == '電影' else 'index104_store.html'
+
+    return render_template(template_name, 
                            next_job=data[0]['next_job'],
                            district=dist_map[data[0]['addr_no']])
 
