@@ -37,7 +37,7 @@ def hello():
     return render_template('job.html')
 
 @app.route("/picktime")
-def tgetet():
+def picktime():
     return render_template('picktime.html')
 
 
