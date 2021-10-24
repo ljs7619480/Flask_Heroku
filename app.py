@@ -20,9 +20,9 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb+srv://104-2:nycuisgood@hackathon.ugeyw.mongodb.net/job"
 mongo = PyMongo(app)
 
-# @app.route("/")
-# def hello():
-#     return render_template('index.html')
+@app.route("/")
+def hello():
+    return render_template('mont.html')
 
 #https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find
 @app.route("/job/<custno>/<next_job>")
