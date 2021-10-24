@@ -36,9 +36,15 @@ with open('104/category/district.csv', 'r') as csv_file:
 def hello():
     return render_template('job.html')
 
+@app.route("/picktime")
+def tgetet():
+    return render_template('picktime.html')
+
+
 @app.route("/mont")
 def mont():
     return render_template('mont.html')
+
 
 @app.route("/tgetet")
 def tgetet():
