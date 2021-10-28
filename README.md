@@ -4,13 +4,14 @@
 資料庫因授權關係已於賽後關閉
 
 ## 檔案架構
-
+```
 .
 |-- web/
 |   |-- static/   # static files
 |   |-- tamplete/ # html 模板
 |
 |-- app.py
+```
 
 ## run
 ```
